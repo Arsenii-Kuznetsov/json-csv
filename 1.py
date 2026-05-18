@@ -7,8 +7,8 @@ try:
 except FileNotFoundError:
     exit(f"Файл '{filename}' не найден")
 except PermissionError:
-    exit(f"Нет прав на чтение файла '{filename}'.")
-except json.JSONDecoder:
+    exit(f"Нет прав на чтение файла '{filename}'")
+except json.JSONDecodeError:
     exit(f"Файл содержит некорректный JSON.")
 animals = data.get('animals')
 if not animals:
